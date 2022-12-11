@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); 
+
+*{
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100;
+}
+
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    transition: 0.4s;
+    min-height: 100vh;
+    }
+    /*
+    .dark-mode {
+    
+    
+        background-color: #494e4e;
+        color: #fff;
+    
+    } */
+    
+    body.dark {
+       
+        background-color: #ff5e5e;
+    background-image: linear-gradient(to top, #940096 0%, #4f3595 100%);
+       
+    
+        
+
+
+    }
+
+    body.dark button{
+
+        background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);
+        
+    }
+
+    body.dark button:hover{
+        background-image: none;
+        transition: 1.2s;
+        background-color: #05ff26;
+
+    }
+    body.dark .quiz-container{
+        background-color: #15216d;
+    }
+    body.dark ul li{
+        color: rgb(255, 255, 255);
+    }
+    body.dark h2{
+        color: #01ce04;
+    }
+
+.switch{
+    position: relative;
+    width: 3.5rem;
+    height: 2rem;
+    
+}
+
+.switch input{
+opacity: 0;
+width: 0;
+height: 0;
+
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(215,215,228);
+    transition: 0.4s;
+    border-radius: 30px;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 20px;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    transition: 0.4s;
+}
+ input:checked + .slider{
+
+    background-color: #37393f;
+ }
+ input:checked + .slider:before{
+left: calc(100% - 1.7rem);
+background: #37393f;
+box-shadow:
+inset -3px -2px 5px -2px #8983f7,
+inset -10px -4px 0 0 #a3dafb;
+
+
+
+ }
+
+
+
+.quiz-container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.1);
+    /*   sqnka   */
+    width: 600px;
+    max-width: 100%;
+}
+.quiz-header{
+    padding: 4rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+h2{
+    font-style: italic;
+    font-weight: 700;
+    margin: 0;
+}
+ul li{
+    
+    margin: 1.5rem ;
+    font-style: normal;
+    font-weight: 400;
+    
+   
+}
+ul li label{
+    cursor: pointer;
+    
+}
+
+/*      button glupost            */
+
+/* .button-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+} */
+
+
+
+*,
+*button:after,
+*button:before{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+button{
+    display: inline-block;
+    position: relative;
+    background: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-color: #ffe600;
+    background: #ebd406;
+    border-radius: 20px;
+    width: 100%;
+    padding: 1.1rem;
+    box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.1);
+}
+
+
+button.focus{
+    background-color: #ffffff;
+    outline: none;
+}
+
+span{
+    display: block;
+    padding: 10px 60px;
+    font-family: "Roboto Mono";
+}
+
+button::before,
+button::after{
+    content: "";
+    width: 0;
+    height: 8px;
+    position: absolute;
+    transition: all 0.2 linear;
+    border-radius: 50px; 
+    background: #ea05ff;
+    
+  
+}
+span::before,
+span::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2 linear;
+    background: #54E6E7; 
+}
+button:hover::before,
+button:hover::after{
+    width: 100%;
+    
+    
+}
+button:hover span::before,
+button:hover span::after{
+    height: 100%;
+  
+     
+}
+button::after{
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+
+}
+button span::after{
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+    
+
+}
+button::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+
+button span::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+
+/*  switch dark theme */
+
+/* malko stars */
+
+
+
